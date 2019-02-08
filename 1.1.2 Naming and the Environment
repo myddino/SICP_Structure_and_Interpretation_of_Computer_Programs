@@ -1,0 +1,18 @@
+(define size 2)
+
+(* 5 size) // 10
+
+
+
+(define pi 3.14159)
+
+(define radius 10)
+
+(* pi (* radius radius)) // 314.159
+
+
+(define cirsumference (* 2 pi radius))
+cirsumference // 62.8318
+
+
+

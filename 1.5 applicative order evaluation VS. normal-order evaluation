@@ -1,0 +1,27 @@
+applicative order evaluation
+
+(define (p) (p))
+
+For applicative order evaluation: (test 0 (p)) => infinite loop
+The arguments are evaluated before the body of the procedure is executed.
+
+
+normal order evaluation
+
+(define (test x y)
+  (if (= x 0)
+      0
+      y))
+
+For normal order evaluation: (test 0 (p)) => 0
+The arguments are evaluated when they are used within the body of the procedure.
+
+Using normal-order evaluation, the expression evaluates, step by step, to 0:
+
+ (test 0 (p)) 
+  
+ (if (= 0 0) 0 (p)) 
+  
+ (if #t 0 (p)) 
+  
+ 0 
